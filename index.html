@@ -10,17 +10,19 @@
   <meta name="theme-color" content="#1a1f2e" media="(prefers-color-scheme: dark)" />
   <title>RO Bonus LIST · NORI Archive</title>
   <script>
+    // 預設深色（即使使用者系統是 light），除非使用者明確選過 light
     (function () {
       try {
         var s = localStorage.getItem('ro-bonus-theme');
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var dark = s === 'dark' || (!s && prefersDark);
+        var dark = s !== 'light';
         if (dark) document.documentElement.classList.add('dark');
-      } catch (e) {}
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
     })();
   </script>
-  <script type="module" crossorigin src="/assets/index-5ck9Fd5g.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-COPIisyn.css">
+  <script type="module" crossorigin src="/assets/index-D2Vbi_AR.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Cuio6_c_.css">
 </head>
 
 <body>
